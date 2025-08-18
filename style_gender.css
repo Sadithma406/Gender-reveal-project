@@ -1,0 +1,73 @@
+
+body{
+    background-image: url("assets/bbb.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.circles{
+border-radius:100%;
+border:3px solid black;
+width:100px;
+height:100px;
+margin:20px;
+position:relative;
+transition: transform 1s;
+background-image: url("assets/ques.jpg");
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+background-color: black;
+cursor:pointer;
+}
+.bgvid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    position: fixed;
+    display:none;
+    top:0;
+}
+.rows{
+    display:flex;
+    padding-left:25px;
+}
+.genders{
+    position:relative;
+    margin:20px auto;
+    width:500px;
+    z-index:1;
+    
+  background: linear-gradient(135deg, 
+              rgba(255,255,255,0.9), 
+              rgba(220,220,220,0.8));
+    border-radius:40px;
+    padding-right:0;
+}
+
+.flipped{
+    transform:rotateY(180deg);
+}
+.flippedtwice{
+    transition:transform 2s;
+    transform:rotateY(360deg);
+}
+h2{
+    font-family: 'Dancing Script', cursive;
+    margin:0 auto;
+    font-size:80px;
+    z-index:1;
+    position:relative;
+    text-align: center;
+
+}
+.girl{
+    color:rgb(243, 147, 163);
+}
+.boy{
+    color:rgb(37, 171, 212);
+}
+.black{
+    color:black
+}
