@@ -1,0 +1,24 @@
+# ============================================
+# 🐳 DOCKER COMPOSE — The Easy Button
+# ============================================
+# Instead of typing: docker build -t gender-reveal . && docker run -d -p 8080:80 gender-reveal
+# You just type: docker compose up
+# 
+# Docker Compose is especially useful when you have MULTIPLE containers
+# (e.g., a web server + a database + a cache), but it's great for single
+# containers too because it saves your configuration.
+
+services:
+  web:
+    # Build the image from the Dockerfile in the current directory
+    build: .
+
+    # Map port 8080 on YOUR machine to port 80 INSIDE the container
+    # Format: "HOST_PORT:CONTAINER_PORT"
+    # So localhost:8080 → container's port 80 (where Nginx listens)
+    ports:
+      - "8080:80"
+
+    # Restart policy: restart the container if it crashes,
+    # but NOT if you manually stop it
+    restart: unless-stopped

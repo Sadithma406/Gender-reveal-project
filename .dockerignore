@@ -1,0 +1,11 @@
+# .dockerignore — Like .gitignore, but for Docker
+# These files WON'T be copied into the image (saves space & build time)
+
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+*.md
